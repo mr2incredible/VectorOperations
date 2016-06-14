@@ -17,7 +17,10 @@ int main () {
 	vector<double> setB = {2, 5, 11};
 	
 	int sizeA = setA.size();
-	cout << "Size of Set A is " << sizeA << endl;	
+	int sizeB = setB.size();
+
+	cout << "Size of Set A is " << sizeA << endl;
+	cout << "Size of Set B is " << sizeB << endl; 	
 
 	vector<double> setAPrime;
 
