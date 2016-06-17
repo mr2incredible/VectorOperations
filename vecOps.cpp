@@ -23,13 +23,20 @@ int main () {
 	cout << "Size of Set B is " << sizeB << endl; 	
 
 	vector<double> setAPrime;
-
-	int i = 0;
-	int j = 0;
-
+ 
+ int b = 2;
+ 
+ setAPrime.push_back(b);
+ 
+ cout << "Contents of APrime is: " << setAPrime[0] << endl;
+ 
+	//int i = 0;
+	//int j = 0;
+ /*
 	while (setA.size() < i && setB.size() < j) {
 		if (setA[i] < setB[j]) {
-			setAPrime[i] = setA[i];
+			setAPrime.insert
+   setAPrime[i] = setA[i];
 			i++;
 			cout << "Item in A is greater than Item in B" << endl;
 		}
@@ -40,5 +47,6 @@ int main () {
 			cout << "Hey" << endl;
 		}
 	}
+ */
 	return 0;
 }	
