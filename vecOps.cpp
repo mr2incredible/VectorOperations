@@ -1,6 +1,8 @@
 /*****************************************************
  * vecOps.cpp
  * Determines differences between two sets of vectors
+ * Numbers in A but not in B
+ * Works only if compiled with C++11
  ****************************************************/
 #include <stdio.h>
 #include <vector>
@@ -10,8 +12,6 @@ using namespace std;
 
 int main () {
 	
-	cout << "Hello world" << endl;
-		
 	//Works only in c++11
 	vector<double> setA = {1, 4, 5, 8, 11, 13, 16};
 	vector<double> setB = {2, 5, 11};
@@ -24,14 +24,34 @@ int main () {
 
 	vector<double> setAPrime;
  
- int b = 2;
+ //int b = 2;
  
- setAPrime.push_back(b);
+ //setAPrime.push_back(b);
  
- cout << "Contents of APrime is: " << setAPrime[0] << endl;
+ //cout << "Contents of APrime is: " << setAPrime[0] << endl;
  
-	//int i = 0;
-	//int j = 0;
+ int i = 0;
+	int j = 0;
+ 
+ while (i < sizeA && j < sizeB) {
+  //cout << "Still in loop" << endl;
+  if (setA[i] < setB[j]) {
+   setAPrime.push_back(setA[i]);
+   i++;
+  }
+  else if (setA[i] > setB[j]) {
+   setAPrime.push_back(setA[i]);
+   j++;
+  }
+  else {
+   i++;
+   j++;
+  }
+ }
+ 
+ for (i = 0; i < setAPrime.size(); i++) {
+  cout << "Contents of APrime: " << setAPrime[i] << endl;
+ }
  /*
 	while (setA.size() < i && setB.size() < j) {
 		if (setA[i] < setB[j]) {
