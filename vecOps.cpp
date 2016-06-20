@@ -15,9 +15,6 @@ vector<double> setDifference(vector<double> setA, vector<double> setB);
 vector<double> setIntersection(vector<double> setA, vector<double> setB);
 vector<double> setUnion(vector<double> setA, vector<double> setB);
 
-// Next step is to implement set union
-vector<double> setUnion(vector<double> setA, vector<double> setB);
-
 int main () {
 	
  // Define two sets of vectors
@@ -138,8 +135,6 @@ vector<double> setIntersection(vector<double> setA, vector<double> setB) {
 
 vector<double> setUnion(vector<double> setA, vector<double> setB) {
  
- //cout << "Hello world" << endl;
- 
  vector<double> setUnion;
  
  // Determine size of each vector set
@@ -162,7 +157,6 @@ vector<double> setUnion(vector<double> setA, vector<double> setB) {
   }
   else {
    setUnion.push_back(setA[i]);
-   //setUnion.push_back(setB[j]);
    i++;
    j++;
   }
